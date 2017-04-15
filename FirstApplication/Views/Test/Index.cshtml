@@ -7,19 +7,23 @@
 <script src="https://use.fontawesome.com/d4a8770686.js"></script>
 <div class="container">
     <div class="row">
-        @if (ViewBag.Data != null)
+        @if (Model!= null)
         {
             <table class="table table-striped">
                 <tr>
-                    <th>@ViewBag.NameUser</th>
+                    <th>Employee Id</th>
+                    <th>Name</th>
+                    <th>Departament Id</th>
+                    <th>Address</th>
                 </tr>
                 <tbody>
-                    @foreach (var item in ViewBag.Data)
-                    {
+                  
                         <tr>
-                            <td>@item</td>
+                            <td>@Model.EmployeeId</td>
+                            <td>@Model.Name</td>
+                            <td>@Model.DepartamentId</td>
+                            <td>@Model.Address</td>
                         </tr>
-                    }
                 </tbody>
             </table>
         }
@@ -30,10 +34,5 @@
                 @ViewBag.Error
             </div>
         }
-        <div class="row">
-            <div class="modal-footer">
-                <a href="/Employee/Employee" class="btn btn-info pull-left"><i class="fa fa-users"></i>&nbsp;Employee</a>
-            </div>
-        </div>
     </div>
 </div>

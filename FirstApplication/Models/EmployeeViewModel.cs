@@ -5,11 +5,11 @@ using System.Web;
 
 namespace FirstApplication.Models
 {
-    public class Employee
+    public class EmployeeViewModel
     {
         public int EmployeeId { get; set; }
-        public String Name { get; set; }
-        public String Departament { get; set; }
-    
+        public string Name { get; set; }
+        public int DepartamentId { get; set; }
+        public string Address { get; set; }
     }
 }
